@@ -1,0 +1,40 @@
+<div class="bootstrap-wrapper">
+<div class="container margin">
+ <div class="row" >
+    <div class="col-md-6 offset-md-3">
+        <div class="container text-center">
+            <img class="img-fluid" style="width:30%"
+             src="\assets\loginicon.png" alt="">
+        </div>
+        <h1 class="text-center">Login here..</h1>
+   
+        <!--creating form-->
+<form (ngSubmit)="OnSubmit()">
+    <mat-form-field class="full-width" appreance="outline">
+    <mat-label>Username</mat-label>
+
+    <!--property & event binding are used here-->
+
+    <input [(ngModel)]="credential.username" name="username"
+required type="text" matInput/>
+    </mat-form-field>
+
+<br>
+
+        <mat-form-field class="full-width" appreance="outline">
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="credential.password" name="Username" required type="password" matInput/>
+        </mat-form-field>
+        <div class="container text-center">
+            <button style="margin-left: 20px;" type="submit" mat-raised-button color="basic" >Login</button>
+            <button type="reset" mat-raised-button color="basic">Reset</button>
+        </div>
+
+    </form>
+<br>
+<p class="margin">{{credential | json}}</p>
+    
+    </div>
+ </div>   
+</div>
+</div>
