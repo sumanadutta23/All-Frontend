@@ -1,0 +1,5 @@
+
+<div *ngFor="let x of todos" class="my-3">
+    <h3 >{{x.title}}</h3>
+    <button class="btn btn-danger" (click)="delTodo(x.sno)">Delete</button>
+</div>
